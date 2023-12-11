@@ -1,23 +1,19 @@
 [helpers]
 
+######################################################################
+# shell
+######################################################################
+
 [shell.files]
 gdbinit = "~/.config/gdb/gdbinit"
 gh = "~/.config/gh"
 gitconfig = "~/.gitconfig"
 ranger = { target = "~/.config/ranger", type = "symbolic"}
-"tmux.conf" = "~/.tmux.conf"
-
-[scripts.files]
 scripts = "~/bin"
+"tmux.conf" = "~/.tmux.conf"
 
 [starship.files]
 "starship.toml" = "~/.config/starship.toml"
-
-[zsh]
-depends = ["shell", "starship", "scripts"]
-
-[zsh.files]
-zshrc = "~/.zshrc"
 
 [bash]
 depends = ["shell"]
@@ -25,17 +21,31 @@ depends = ["shell"]
 [bash.files]
 bashrc = "~/.bashrc"
 
+[zsh]
+depends = ["shell", "starship"]
+
+[zsh.files]
+zshrc = "~/.zshrc"
+
 [fish]
-depends = ["shell"]
+depends = ["shell", "starship"]
 
 [fish.files]
 fish = "~/.config/fish"
 
-[conda.files]
-condarc = "~/.condarc"
+######################################################################
+# terminal
+######################################################################
 
 [alacritty.files]
 alacritty = { target = "~/.config/alacritty", type = "symbolic" }
+
+######################################################################
+# others
+######################################################################
+
+[conda.files]
+condarc = "~/.condarc"
 
 [font.files]
 fontconfig = "~/.config/fontconfig"
