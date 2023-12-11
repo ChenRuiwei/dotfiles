@@ -1,0 +1,6 @@
+channels:
+  - conda-forge
+auto_activate_base: false
+ssl_verify: false
+proxy_servers:
+  http: http://127.0.0.1:7890

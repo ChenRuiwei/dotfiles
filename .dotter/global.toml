@@ -1,0 +1,51 @@
+[helpers]
+
+[shell.files]
+gdbinit = "~/.config/gdb/gdbinit"
+gh = "~/.config/gh"
+gitconfig = "~/.gitconfig"
+ranger = { target = "~/.config/ranger", type = "symbolic"}
+"tmux.conf" = "~/.tmux.conf"
+
+[scripts.files]
+scripts = "~/bin"
+
+[starship.files]
+"starship.toml" = "~/.config/starship.toml"
+
+[zsh]
+depends = ["shell", "starship", "scripts"]
+
+[zsh.files]
+zshrc = "~/.zshrc"
+
+[bash]
+depends = ["shell"]
+
+[bash.files]
+bashrc = "~/.bashrc"
+
+[fish]
+depends = ["shell"]
+
+[fish.files]
+fish = "~/.config/fish"
+
+[conda.files]
+condarc = "~/.condarc"
+
+[alacritty.files]
+alacritty = { target = "~/.config/alacritty", type = "symbolic" }
+
+[font.files]
+fontconfig = "~/.config/fontconfig"
+
+[idea.files]
+ideavimrc = "~/.ideavimrc"
+
+[nvim.files]
+nvim = { target = "~/.config/nvim", type = "symbolic"}
+
+[zathura.files]
+zathurarc = "~/.config/zathura/zathurarc"
+

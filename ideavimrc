@@ -1,0 +1,73 @@
+let mapleader = " "
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Options
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set ideajoin
+set idearefactormode=keep
+
+set number
+set relativenumber
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set autoindent
+set smartindent
+
+set noerrorbells
+set visualbell
+
+set clipboard+=unnamedplus
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" navigation
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+
+" better indenting
+vmap < <gv
+vmap > >gv
+
+" save file
+noremap <C-s> :w<CR><Esc>
+
+" clear highlighting
+nnoremap <Esc><Esc> :noh<CR>
+
+nnoremap <leader>e :NERDTreeToggle<CR>
+nnoremap <leader>E :NERDTreeFocus<CR>
+
+map gs <Plug>(easymotion-s)
+map s <Plug>(easymotion-f)
+map S <Plug>(easymotion-F)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Actions
+" don't use noremap because <action> is mapped already
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <S-h> <action>(PreviousTab)
+nmap <S-l> <action>(NextTab)
+nmap <leader>bd <action>(CloseEditor)
+nmap <leader>bP <action>(CloseAllEditorsButActive)
+nmap <leader>ft <action>(ActivateTerminalToolWindow)
+nmap <leader>cr <action>(RenameElement)
+nmap <leader>cg <action>(Generate)
+nmap gd <action>(GotoDefinition)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'easymotion/vim-easymotion'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'

@@ -1,0 +1,37 @@
+[user]
+	email = 92102709+ChenRuiwei@users.noreply.github.com
+	name = crw
+[init]
+	defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[core]
+	editor = nvim
+[color]
+	ui = true
+[merge]
+	tool = nvimdiff
+; [mergetool]
+; 	keepBackup = false
+
+; Delta config
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    side-by-side = true
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+[http]
+	proxy = 127.0.0.1:7890
+[https]
+	proxy = 127.0.0.1:7890

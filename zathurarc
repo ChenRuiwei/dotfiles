@@ -1,0 +1,5 @@
+# GENERAL SETTINGS
+# --------------------------------------------- #
+set selection-clipboard   clipboard
+set window-title-basename true
+set statusbar-home-tilde  true
