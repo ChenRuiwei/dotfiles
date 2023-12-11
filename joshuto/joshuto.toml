@@ -20,9 +20,6 @@ watch_files = true
 # - `:mkdir ./b` keeps the cursor where it was
 focus_on_create = true
 
-# The maximum file size to show a preview for
-max_preview_size = 2097152 # 2MB
-
 # Define custom commands (using shell) with parameters like %text, %s etc.
 custom_commands = [
    { name = "rgfzf", command = "/home/<USER>/.config/joshuto/rgfzf '%text' %s" },
@@ -95,7 +92,7 @@ reverse = false
 [preview]
 
 # Maximum preview file size in bytes
-max_preview_size = 2097152
+max_preview_size = 2097152 # 2MB
 
 # Executable script for previews
 preview_script = "~/.config/joshuto/preview_file.sh"
