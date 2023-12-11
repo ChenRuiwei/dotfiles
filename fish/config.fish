@@ -1,5 +1,6 @@
 abbr -a cat bat
 abbr -a j z
+abbr -a jo joshuto
 abbr -a l "exa -ah"
 abbr -a ll "exa -lah"
 abbr -a ra ranger
@@ -23,6 +24,10 @@ abbr -a gsw "git switch"
 abbr -a gloga "git log --all --graph --oneline --decorate"
 
 set fish_greeting
+
+fish_add_path ~/bin/
+
+set -gx PAGER less
 
 {{#if (is_executable "starship")}}
 starship init fish | source
