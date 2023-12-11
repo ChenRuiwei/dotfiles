@@ -17,31 +17,6 @@ return {
       },
     },
   },
-  -- {
-  --   "nvimtools/none-ls.nvim",
-  --   opts = function(_, opts)
-  --     local nls = require("null-ls")
-  --     table.insert(opts.sources, nls.builtins.formatting.verible_verilog_format)
-  --     table.insert(opts.sources, nls.builtins.diagnostics.verilator)
-  --   end,
-  --   -- opts = function()
-  --   --   local nls = require("null-ls")
-  --   --   return {
-  --   --     root_dir = require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile", ".git"),
-  --   --     sources = {
-  --   --       nls.builtins.formatting.stylua,
-  --   --       nls.builtins.formatting.shfmt,
-  --   --       nls.builtins.formatting.prettier,
-  --   --       nls.builtins.formatting.clang_format,
-  --   --       -- nls.builtins.diagnostics.flake8,
-  --   --
-  --   --       -- verilog
-  --   --       nls.builtins.formatting.verible_verilog_format,
-  --   --       nls.builtins.diagnostics.verilator,
-  --   --     },
-  --   --   }
-  --   -- end,
-  -- },
   {
     "stevearc/conform.nvim",
     opts = {
