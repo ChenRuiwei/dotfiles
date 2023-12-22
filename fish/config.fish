@@ -5,6 +5,7 @@ abbr -a l "exa -ah"
 abbr -a ll "exa -lah"
 abbr -a ra ranger
 abbr -a v nvim
+abbr -a m man
 
 abbr -a g git
 abbr -a ga "git add"
@@ -30,6 +31,14 @@ fish_add_path ~/miniforge3/bin/
 
 set -gx PAGER less
 set -gx MANPAGER nvimpager
+
+function fish_user_key_bindings
+    # for accepting autosuggestions in vi mode
+    # https://github.com/fish-shell/fish-shell/issues/3541#issuecomment-260001906
+    for mode in insert default visual
+        bind -M $mode \cf forward-char
+    end
+end
 
 {{#if (is_executable "starship")}}
 starship init fish | source
