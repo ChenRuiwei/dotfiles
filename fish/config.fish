@@ -26,8 +26,10 @@ abbr -a gloga "git log --all --graph --oneline --decorate"
 set fish_greeting
 
 fish_add_path ~/bin/
+fish_add_path ~/miniforge3/bin/
 
 set -gx PAGER less
+set -gx MANPAGER nvimpager
 
 {{#if (is_executable "starship")}}
 starship init fish | source
@@ -36,3 +38,15 @@ starship init fish | source
 {{#if (is_executable "zoxide")}}
 zoxide init fish | source
 {{/if}}
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/crw/miniforge3/bin/conda
+    eval /home/crw/miniforge3/bin/conda "shell.fish" hook $argv | source
+end
+
+if test -f "/home/crw/miniforge3/etc/fish/conf.d/mamba.fish"
+    source "/home/crw/miniforge3/etc/fish/conf.d/mamba.fish"
+end
+# <<< conda initialize <<<
