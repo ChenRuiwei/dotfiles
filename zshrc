@@ -154,20 +154,20 @@ if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/crw/.mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/crw/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/crw/.mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/home/crw/.mambaforge/etc/profile.d/conda.sh"
+    if [ -f "/home/crw/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/crw/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/crw/.mambaforge/bin:$PATH"
+        export PATH="/home/crw/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 
-if [ -f "/home/crw/.mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/home/crw/.mambaforge/etc/profile.d/mamba.sh"
+if [ -f "/home/crw/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/home/crw/miniforge3/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
 
