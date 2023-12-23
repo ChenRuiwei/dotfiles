@@ -6,6 +6,7 @@ abbr -a ll "exa -lah"
 abbr -a ra ranger
 abbr -a v nvim
 abbr -a m man
+abbr -a tmux "TERM=xterm-256color tmux"
 
 abbr -a g git
 abbr -a ga "git add"
