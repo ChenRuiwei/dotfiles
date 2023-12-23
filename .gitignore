@@ -3,3 +3,4 @@
 .dotter/cache.toml
 
 ranger/trash_history
+nvim/lazy-lock.json
