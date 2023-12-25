@@ -21,6 +21,7 @@ return {
       },
     },
   },
+
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
@@ -33,6 +34,7 @@ return {
       },
     },
   },
+
   {
     "L3MON4D3/LuaSnip",
     dependencies = {
@@ -82,18 +84,22 @@ return {
       },
     },
   },
+
   {
     "vhda/verilog_systemverilog.vim",
     ft = { "verilog", "verilog_systemverilog" },
   },
+
   {
     "lervag/vimtex",
     ft = "tex",
   },
+
   {
     "lilydjwg/fcitx.vim",
     lazy = true,
   },
+
   {
     -- If nothing happens on MarkdownPreview, see the issue
     -- https://github.com/iamcco/markdown-preview.nvim/issues/188#issuecomment-629038471
@@ -112,9 +118,15 @@ return {
       ]])
     end,
   },
+
   {
     "kaarmu/typst.vim",
     ft = "typst",
     lazy = false,
+  },
+
+  {
+    "hotoo/pangu.vim",
+    ft = { "typst", "md" },
   },
 }
