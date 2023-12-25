@@ -3,6 +3,7 @@ abbr -a j z
 abbr -a jo joshuto
 abbr -a l "exa -ah"
 abbr -a ll "exa -lah"
+abbr -a lg lazygit
 abbr -a ra ranger
 abbr -a v nvim
 abbr -a m man
@@ -28,8 +29,10 @@ abbr -a gloga "git log --all --graph --oneline --decorate"
 set fish_greeting
 
 fish_add_path ~/bin/
+fish_add_path ~/.cargo/bin/
 fish_add_path ~/miniforge3/bin/
 
+set -gx EDITOR nvim
 set -gx PAGER less
 set -gx MANPAGER nvimpager
 
@@ -41,13 +44,9 @@ function fish_user_key_bindings
     end
 end
 
-{{#if (is_executable "starship")}}
 starship init fish | source
-{{/if}}
 
-{{#if (is_executable "zoxide")}}
 zoxide init fish | source
-{{/if}}
 
 
 # >>> conda initialize >>>
