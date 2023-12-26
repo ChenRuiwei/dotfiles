@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:/opt/cuda/bin:$HOME/.cargo/bin:$PATH
-export PATH=/home/crw/Code/user-land-filesystem/driver/user_ddriver/bin:$PATH
 export DDRIVER_TYPE='u'
 
 # Path to your oh-my-zsh installation.

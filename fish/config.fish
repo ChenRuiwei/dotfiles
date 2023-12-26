@@ -30,7 +30,6 @@ set fish_greeting
 
 fish_add_path ~/bin/
 fish_add_path ~/.cargo/bin/
-fish_add_path ~/miniforge3/bin/
 
 set -gx EDITOR nvim
 set -gx PAGER less
@@ -53,9 +52,5 @@ zoxide init fish | source
 # !! Contents within this block are managed by 'conda init' !!
 if test -f /home/crw/miniforge3/bin/conda
     eval /home/crw/miniforge3/bin/conda "shell.fish" hook $argv | source
-end
-
-if test -f "/home/crw/miniforge3/etc/fish/conf.d/mamba.fish"
-    source "/home/crw/miniforge3/etc/fish/conf.d/mamba.fish"
 end
 # <<< conda initialize <<<
