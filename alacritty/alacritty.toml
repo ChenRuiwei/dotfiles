@@ -7,13 +7,5 @@ size = 12.0
 family = "JetBrainsMono NF"
 style = "Regular"
 
-[font.normal.bold]
-family = "JetBrainsMono NF"
-style = "Bold"
-
-[font.normal.italic]
-family = "JetBrainsMono NF"
-style = "Italic"
-
 [window]
 opacity = 0.9
