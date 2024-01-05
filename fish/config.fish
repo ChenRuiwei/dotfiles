@@ -9,6 +9,13 @@ abbr -a v nvim
 abbr -a m man
 abbr -a tmux "TERM=xterm-256color tmux"
 
+abbr -a co conda
+abbr -a coa "conda activate"
+abbr -a coab "conda activate base"
+abbr -a cod "conda deactivate"
+abbr -a coi "conda install"
+abbr -a cos "conda search"
+
 abbr -a g git
 abbr -a ga "git add"
 abbr -a gb "git branch"
