@@ -143,8 +143,10 @@ export EDITOR=nvim
 export PAGER=less
 export REPO_DIR=$HOME/Code/cs61b
 
+{{#if dotter.packages.starship}}
 # starship
 eval "$(starship init zsh)"
+{{/if}}
 
 # Ranger shell prompt indicator
 # Put under starship otherwise PS1 will be set by starship
@@ -153,7 +155,7 @@ if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/crw/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/crw/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
@@ -164,9 +166,5 @@ else
     fi
 fi
 unset __conda_setup
-
-if [ -f "/home/crw/miniforge3/etc/profile.d/mamba.sh" ]; then
-    . "/home/crw/miniforge3/etc/profile.d/mamba.sh"
-fi
 # <<< conda initialize <<<
 

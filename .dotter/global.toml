@@ -8,7 +8,7 @@
 gdbinit = "~/.config/gdb/gdbinit"
 gh = "~/.config/gh"
 gitconfig = "~/.gitconfig"
-ranger = { target = "~/.config/ranger", type = "symbolic"}
+ranger = { target = "~/.config/ranger", type = "symbolic" }
 joshuto = "~/.config/joshuto"
 scripts = "~/bin"
 "tmux.conf" = "~/.tmux.conf"
@@ -23,13 +23,13 @@ depends = ["shell"]
 bashrc = "~/.bashrc"
 
 [zsh]
-depends = ["shell", "starship"]
+depends = ["shell"]
 
 [zsh.files]
 zshrc = "~/.zshrc"
 
 [fish]
-depends = ["shell", "starship"]
+depends = ["shell"]
 
 [fish.files]
 fish = "~/.config/fish"
@@ -55,8 +55,7 @@ fontconfig = "~/.config/fontconfig"
 ideavimrc = "~/.ideavimrc"
 
 [nvim.files]
-nvim = { target = "~/.config/nvim", type = "symbolic"}
+nvim = { target = "~/.config/nvim", type = "symbolic" }
 
 [zathura.files]
 zathurarc = "~/.config/zathura/zathurarc"
-

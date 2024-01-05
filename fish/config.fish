@@ -50,7 +50,9 @@ function fish_user_key_bindings
     end
 end
 
+{{#if dotter.packages.starship}}
 starship init fish | source
+{{/if}}
 
 zoxide init fish | source
 
