@@ -23,6 +23,21 @@ return {
   ),
   -- PYTHON CODE BLOCK
   s(
+    { trig = "baa", snippetType = "autosnippet" },
+    fmt(
+      [[
+        ```bash
+        {}
+        ```
+        ]],
+      {
+        d(1, get_visual),
+      }
+    ),
+    { condition = line_begin }
+  ),
+  -- PYTHON CODE BLOCK
+  s(
     { trig = "pyy", snippetType = "autosnippet" },
     fmt(
       [[
