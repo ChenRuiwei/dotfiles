@@ -50,6 +50,9 @@ function fish_user_key_bindings
     end
 end
 
+set fish_cursor_default block
+set fish_cursor_insert line
+
 {{#if dotter.packages.starship}}
 starship init fish | source
 {{/if}}
