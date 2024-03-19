@@ -26,6 +26,7 @@ abbr -a gcam "git commit -am"
 abbr -a gcmsg "git commit -m"
 abbr -a gco "git checkout"
 abbr -a gd "git diff"
+abbr -a gds "git diff --staged"
 abbr -a gp "git push"
 abbr -a gr "git remote"
 abbr -a grv "git remote -v"
@@ -41,6 +42,7 @@ fish_add_path ~/.cargo/bin/
 set -gx EDITOR nvim
 set -gx PAGER less
 set -gx MANPAGER nvimpager
+set -gx RISCV_GDB riscv64-elf-gdb
 
 function fish_user_key_bindings
     # for accepting autosuggestions in vi mode
