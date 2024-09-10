@@ -1,6 +1,8 @@
 channels:
-  - conda-forge
+    - conda-forge
 auto_activate_base: false
-ssl_verify: false
-proxy_servers:
-  http: http://127.0.0.1:7890
+
+show_channel_urls: true
+
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
