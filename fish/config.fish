@@ -1,6 +1,4 @@
-abbr -a cat bat
 abbr -a j z
-abbr -a jo joshuto
 abbr -a l "exa -ah"
 abbr -a ll "exa -lah"
 abbr -a lg lazygit
@@ -51,6 +49,8 @@ function fish_user_key_bindings
         bind -M $mode \cf forward-char
     end
 end
+
+fish_vi_key_bindings
 
 set fish_cursor_default block
 set fish_cursor_insert line
