@@ -1,5 +1,11 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export EDITOR:nvim
+SETUVAR --export MAMBA_EXE:/usr/bin/micromamba
+SETUVAR --export MAMBA_ROOT_PREFIX:\x7e/\x2emamba
+SETUVAR --export MANPAGER:less
+SETUVAR --export PAGER:less
+SETUVAR --export RISCV_GDB:riscv64\x2delf\x2dgdb
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr

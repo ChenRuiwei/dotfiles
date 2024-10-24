@@ -7,12 +7,11 @@ abbr -a v nvim
 abbr -a m man
 abbr -a tmux "TERM=xterm-256color tmux"
 
-abbr -a co conda
-abbr -a coa "conda activate"
-abbr -a coab "conda activate base"
-abbr -a cod "conda deactivate"
-abbr -a coi "conda install"
-abbr -a cos "conda search"
+abbr -a mm micromamba
+abbr -a mma "micromamba activate"
+abbr -a mmd "micromamba deactivate"
+abbr -a mmi "micromamba install"
+abbr -a mms "micromamba search"
 
 abbr -a g git
 abbr -a ga "git add"
@@ -37,10 +36,10 @@ set fish_greeting
 fish_add_path ~/bin/
 fish_add_path ~/.cargo/bin/
 
-set -gx EDITOR nvim
-set -gx PAGER less
-set -gx MANPAGER nvimpager
-set -gx RISCV_GDB riscv64-elf-gdb
+set -Ux EDITOR nvim
+set -Ux PAGER less
+set -Ux MANPAGER $PAGER
+set -Ux RISCV_GDB riscv64-elf-gdb
 
 function fish_user_key_bindings
     # for accepting autosuggestions in vi mode
@@ -62,9 +61,9 @@ starship init fish | source
 zoxide init fish | source
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f /home/crw/miniforge3/bin/conda
-    eval /home/crw/miniforge3/bin/conda "shell.fish" hook $argv | source
-end
-# <<< conda initialize <<<
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'micromamba shell init' !!
+set -Ux MAMBA_EXE /usr/bin/micromamba
+set -Ux MAMBA_ROOT_PREFIX "~/.mamba"
+$MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
+# <<< mamba initialize <<<
