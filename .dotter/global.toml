@@ -9,7 +9,6 @@ gdbinit = { target = "~/.config/gdb/gdbinit", type = "symbolic" }
 gh = "~/.config/gh"
 gitconfig = "~/.gitconfig"
 ranger = { target = "~/.config/ranger", type = "symbolic" }
-joshuto = "~/.config/joshuto"
 scripts = "~/bin"
 "tmux.conf" = "~/.tmux.conf"
 
