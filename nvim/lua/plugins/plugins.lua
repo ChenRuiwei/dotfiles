@@ -144,7 +144,7 @@ return {
     },
     opts = {
       -- 配置放在这里
-      lang = "rust",
+      lang = "cpp",
       cn = {
         enabled = true,
       },
