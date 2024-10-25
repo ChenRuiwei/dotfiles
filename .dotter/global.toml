@@ -58,3 +58,6 @@ nvim = { target = "~/.config/nvim", type = "symbolic" }
 
 [zathura.files]
 zathurarc = "~/.config/zathura/zathurarc"
+
+[hypr.files]
+hypr = "~/.config/hypr"
