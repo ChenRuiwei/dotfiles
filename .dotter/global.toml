@@ -41,6 +41,19 @@ fish = "~/.config/fish"
 alacritty = { target = "~/.config/alacritty", type = "symbolic" }
 
 ######################################################################
+# windows manager
+######################################################################
+
+[hypr]
+depends = ["waybar"]
+
+[hypr.files]
+hypr = "~/.config/hypr"
+
+[waybar.files]
+waybar = "~/.config/waybar"
+
+######################################################################
 # others
 ######################################################################
 
@@ -58,6 +71,3 @@ nvim = { target = "~/.config/nvim", type = "symbolic" }
 
 [zathura.files]
 zathurarc = "~/.config/zathura/zathurarc"
-
-[hypr.files]
-hypr = "~/.config/hypr"
