@@ -11,6 +11,7 @@ gitconfig = "~/.gitconfig"
 ranger = { target = "~/.config/ranger", type = "symbolic" }
 scripts = "~/bin"
 "tmux.conf" = "~/.tmux.conf"
+env = "~/.env"
 
 [starship.files]
 "starship.toml" = "~/.config/starship.toml"

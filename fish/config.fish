@@ -3,6 +3,7 @@ abbr -a l "exa -ah"
 abbr -a ll "exa -lah"
 abbr -a lg lazygit
 abbr -a ra ranger
+abbr -a jj yazi
 abbr -a v nvim
 abbr -a m man
 abbr -a tmux "TERM=xterm-256color tmux"
@@ -36,10 +37,7 @@ set fish_greeting
 fish_add_path ~/bin/
 fish_add_path ~/.cargo/bin/
 
-set -Ux EDITOR nvim
-set -Ux PAGER less
-set -Ux MANPAGER $PAGER
-set -Ux RISCV_GDB riscv64-elf-gdb
+export (envsubst < .env)
 
 function fish_user_key_bindings
     # for accepting autosuggestions in vi mode
