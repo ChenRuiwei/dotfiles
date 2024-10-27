@@ -12,6 +12,7 @@ ranger = { target = "~/.config/ranger", type = "symbolic" }
 scripts = "~/bin"
 "tmux.conf" = "~/.tmux.conf"
 env = "~/.env"
+lazygit = "~/.config/lazygit"
 
 [starship.files]
 "starship.toml" = "~/.config/starship.toml"
