@@ -47,13 +47,16 @@ alacritty = { target = "~/.config/alacritty", type = "symbolic" }
 ######################################################################
 
 [hypr]
-depends = ["waybar"]
+depends = ["waybar", "rofi"]
 
 [hypr.files]
 hypr = "~/.config/hypr"
 
 [waybar.files]
 waybar = "~/.config/waybar"
+
+[rofi.files]
+rofi = "~/.config/rofi"
 
 ######################################################################
 # others
