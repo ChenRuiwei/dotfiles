@@ -5,18 +5,14 @@
   "margin-bottom": 0,
   "margin-left": 0,
   "margin-right": 0,
-  "spacing": 0,
+  "spacing": 4, // size of gaps in between of the different modules
+  "reload_style_on_change": true, // reloading the css style if a modification is detected
 
   // Load Modules
   "include": ["~/.config/waybar/modules.jsonc"],
 
   // Modules Left
-  "modules-left": [
-    "custom/appmenu",
-    "wlr/taskbar",
-    "hyprland/window",
-    "custom/empty",
-  ],
+  "modules-left": ["custom/exit", "wlr/taskbar", "hyprland/window"],
 
   // Modules Center
   "modules-center": ["hyprland/workspaces"],
@@ -31,7 +27,6 @@
     "network",
     "group/hardware",
     "group/tools",
-    "custom/exit",
     "clock",
   ],
 }

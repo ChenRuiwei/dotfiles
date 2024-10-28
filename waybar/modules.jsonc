@@ -7,11 +7,6 @@
     "active-only": false,
     "all-outputs": true,
     "format": "{}",
-    "format-icons": {
-      "urgent": "",
-      "active": "",
-      "default": "",
-    },
   },
 
   // Taskbar
@@ -32,14 +27,9 @@
     "separate-outputs": true,
   },
 
-  // Empty
-  "custom/empty": {
-    "format": "",
-  },
-
   // Tools
   "custom/tools": {
-    "format": "",
+    "format": " ",
     "tooltip-format": "Tools",
   },
 
@@ -76,7 +66,7 @@
 
   // Clock
   "clock": {
-    "format": "{:%H:%M %a}",
+    "format": "{:%H:%M}",
     "tooltip": false,
   },
 
@@ -137,7 +127,7 @@
   // Network
   "network": {
     "format": "{ifname}",
-    "format-wifi": "  {signalStrength}%",
+    "format-wifi": " {signalStrength}%",
     "format-ethernet": "  {ifname}",
     "format-disconnected": "Disconnected",
     "tooltip-format": " {ifname} via {gwaddri}",
@@ -162,7 +152,7 @@
     "format-alt": "{icon}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": [" ", " ", " ", " ", " "],
+    "format-icons": ["", "", "", "", ""],
   },
 
   "wireplumber": {
@@ -171,7 +161,7 @@
     "tooltip-format": "Volume : {volume}%",
     "format-muted": "",
     "format-icons": {
-      "default": ["", " ", " "],
+      "default": ["", "", ""],
     },
     "on-click": "pavucontrol",
     "scroll-step": 1,
