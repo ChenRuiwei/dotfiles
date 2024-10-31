@@ -42,6 +42,9 @@ fish = "~/.config/fish"
 [alacritty.files]
 alacritty = { target = "~/.config/alacritty", type = "symbolic" }
 
+[kitty.files]
+kitty = { target = "~/.config/kitty", type = "symbolic" }
+
 ######################################################################
 # windows manager
 ######################################################################
