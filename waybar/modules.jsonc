@@ -29,7 +29,7 @@
 
   // Tools
   "custom/tools": {
-    "format": " ",
+    "format": "",
     "tooltip-format": "Tools",
   },
 
@@ -42,7 +42,7 @@
 
   // Power Menu
   "custom/exit": {
-    "format": " ",
+    "format": "",
     "on-click": "wlogout",
     "tooltip-format": "Power Menu",
   },
@@ -67,7 +67,8 @@
   // Clock
   "clock": {
     "format": "{:%H:%M}",
-    "tooltip": false,
+    "tooltip-format": "{:%Y年%m月%d日}",
+    // "tooltip": false,
   },
 
   // System
@@ -107,9 +108,9 @@
   // Cliphist
   "custom/cliphist": {
     "format": "",
-    "on-click": "sleep 0.1 && ~/.config/ml4w/scripts/cliphist.sh",
-    "on-click-right": "sleep 0.1 && ~/.config/ml4w/scripts/cliphist.sh d",
-    "on-click-middle": "sleep 0.1 && ~/.config/ml4w/scripts/cliphist.sh w",
+    "on-click": "sleep 0.1 && ~/bin/cliphist.sh",
+    "on-click-right": "sleep 0.1 && ~/bin/cliphist.sh d",
+    "on-click-middle": "sleep 0.1 && ~/bin/cliphist.sh w",
     "tooltip-format": "Clipboard Manager",
   },
 
@@ -147,8 +148,8 @@
       "critical": 15,
     },
     "format": "{icon} {capacity}%",
-    "format-charging": "  {capacity}%",
-    "format-plugged": "  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
     "format-alt": "{icon}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
@@ -199,5 +200,51 @@
     ],
     "format-alt": "{icon}",
     "scroll-step": 1,
+  },
+
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂚",
+      "dnd-notification": "󱅫",
+      "dnd-none": "󱏧",
+      "inhibited-notification": "󱅫",
+      "inhibited-none": "󰂚",
+      "dnd-inhibited-notification": "󱅫",
+      "dnd-inhibited-none": "󱏧",
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click-right": "swaync-client -d -sw",
+    "on-click": "swaync-client -t -sw",
+    "escape": true,
+  },
+
+  // Updates Count
+  "custom/updates": {
+    "format": " {}",
+    "escape": true,
+    "return-type": "json",
+    "exec": "~/bin/check-updates.sh",
+    "interval": 1800,
+    "on-click": "kitty --class dotfiles-floating -e ~/bin/update-system.sh",
+  },
+
+  "custom/l_end": {
+    "format": " ",
+    "tooltip": false,
+  },
+
+  "custom/r_end": {
+    "format": " ",
+    "tooltip": false,
+  },
+
+  "custom/padd": {
+    "format": " ",
+    "tooltip": false,
   },
 }

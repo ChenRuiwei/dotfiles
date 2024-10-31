@@ -12,21 +12,35 @@
   "include": ["~/.config/waybar/modules.jsonc"],
 
   // Modules Left
-  "modules-left": ["custom/exit", "wlr/taskbar", "hyprland/window"],
+  "modules-left": [
+    "custom/padd",
+    "custom/exit",
+    "custom/padd",
+    "wlr/taskbar",
+    "custom/padd",
+    "hyprland/window",
+    "custom/padd",
+  ],
 
   // Modules Center
   "modules-center": ["hyprland/workspaces"],
 
   // Modules Right
   "modules-right": [
+    "custom/padd",
     "tray",
+    "custom/updates",
     "backlight",
     // "bluetooth",
     "battery",
     "wireplumber",
     "network",
+    "custom/padd",
     "group/hardware",
     "group/tools",
+    "custom/notification",
+    "custom/padd",
     "clock",
+    "custom/padd",
   ],
 }
