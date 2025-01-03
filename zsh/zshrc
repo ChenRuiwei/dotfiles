@@ -152,7 +152,6 @@ alias ll='exa -lh'
 alias j='z'
 alias g='git'
 alias gs='git status'
-alias ra='ranger'
 alias t='TERM=xterm-256color tmux'
 alias tmux='TERM=xterm-256color tmux'
 alias v='nvim'
@@ -173,11 +172,6 @@ export REPO_DIR=$HOME/Code/cs61b
 
 # starship
 eval "$(starship init zsh)"
-
-# Ranger shell prompt indicator
-# Put under starship otherwise PS1 will be set by starship
-if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

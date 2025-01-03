@@ -2,7 +2,6 @@ abbr -a j z
 abbr -a l "exa -ah"
 abbr -a ll "exa -lah"
 abbr -a lg lazygit
-abbr -a ra ranger
 abbr -a jj yazi
 abbr -a v nvim
 abbr -a m man

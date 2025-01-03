@@ -9,9 +9,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
-# Ranger shell prompt indicator
-if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/crw/miniforge3/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
