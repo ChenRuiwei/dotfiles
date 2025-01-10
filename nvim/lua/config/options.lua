@@ -10,6 +10,7 @@ opt.softtabstop = 4
 opt.expandtab = true
 opt.autoindent = true
 opt.smartindent = true
+opt.jumpoptions = "stack"
 
 vim.cmd([[
         let g:fcitx5_rime = 1
