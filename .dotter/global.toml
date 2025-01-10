@@ -12,6 +12,7 @@ scripts = "~/bin"
 "tmux.conf" = "~/.tmux.conf"
 env = "~/.env"
 lazygit = "~/.config/lazygit"
+inputrc = "~/.inputrc"
 
 [starship.files]
 "starship.toml" = "~/.config/starship.toml"
