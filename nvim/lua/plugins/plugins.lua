@@ -35,36 +35,6 @@ return {
     },
   },
 
-  {
-    "L3MON4D3/LuaSnip",
-    dependencies = {
-      "rafamadriz/friendly-snippets",
-      config = function()
-        require("luasnip.loaders.from_vscode").lazy_load({
-          -- exclude = { "verilog" },
-        })
-      end,
-    },
-    keys = {
-      {
-        "<leader>L",
-        '<cmd>lua require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})<cr>',
-        desc = "Refresh snippets",
-      },
-    },
-    opts = {
-      -- Enable autotriggered snippets
-      enable_autosnippets = true,
-      -- Use <Tab> (or some other key if you prefer) to trigger visual selection
-      store_selection_keys = "<Tab>",
-    },
-    config = function(_, opts)
-      -- Load snippets from ~/.config/nvim/LuaSnip/
-      require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/LuaSnip/" })
-      require("luasnip").config.set_config(opts)
-    end,
-  },
-
   --------------------------------------------------------------------------------
   -- Add new plugins
   --------------------------------------------------------------------------------
