@@ -1,6 +1,8 @@
 local wk = require("which-key")
 
 wk.add({
-  { "<leader>p", group = "preview" },
-  { "<leader>pp", "<Plug>MarkdownPreviewToggle", desc = "Toggle preview" },
+  {
+    mode = { "n", "v" },
+    { "g>", "<C-v>0<S-i>> <esc>", desc = "blockquote" },
+  },
 })
