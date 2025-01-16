@@ -13,8 +13,12 @@ opt.smartindent = true
 opt.jumpoptions = "stack"
 
 vim.cmd([[
+if executable("fcitx5-remote")
         let g:fcitx5_rime = 1
         let fcitx5state=system("fcitx5-remote")
         autocmd InsertLeave * :silent let fcitx5state=system("fcitx5-remote")[0] | silent !fcitx5-remote -c
         autocmd InsertEnter * :silent if fcitx5state == 2 | call system("fcitx5-remote -o") | endif
+else
+        let g:fcitx5_rime = 0
+endif
 ]])
