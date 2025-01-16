@@ -57,7 +57,9 @@ set fish_cursor_insert line
 starship init fish | source
 {{/if}}
 
+{{#if (is_executable "zoxide")}}
 zoxide init fish | source
+{{/if}}
 
 {{#if (is_executable "mamba")}}
 # >>> mamba initialize >>>
