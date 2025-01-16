@@ -1,6 +1,8 @@
 abbr -a j z
-abbr -a l "exa -ah"
-abbr -a ll "exa -lah"
+{{#if (is_executable "eza")}}
+abbr -a l "eza -ah"
+abbr -a ll "eza -lah"
+{{/if}}
 abbr -a lg lazygit
 abbr -a jj yazi
 abbr -a v nvim
@@ -57,10 +59,11 @@ starship init fish | source
 
 zoxide init fish | source
 
-
+{{#if (is_executable "mamba")}}
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'micromamba shell init' !!
-set -Ux MAMBA_EXE /usr/bin/micromamba
-set -Ux MAMBA_ROOT_PREFIX "~/.mamba"
+set -gx MAMBA_EXE (which mamba)
+set -gx MAMBA_ROOT_PREFIX "~/.mamba"
 $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
 # <<< mamba initialize <<<
+{{/if}}
