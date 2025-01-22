@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cd "$(dirname "$0")"/.. || exit 1
+cd $(dirname $(readlink -f $(which "$0")))/.. || exit 1
 
 if [ ! -e .dotter/local.toml ] >/dev/null 2>&1; then
     echo "local.toml not exist"
@@ -21,5 +21,6 @@ fi
 dotter deploy
 
 if [ ! -e ~/.tmux/plugins/tpm ] >/dev/null 2>&1; then
+    mkdir -p ~/.tmux/plugins/
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
