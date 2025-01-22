@@ -3,34 +3,25 @@
 	name = ChenRuiwei
 [init]
 	defaultBranch = main
-[credential "https://github.com"]
-	helper = 
-	helper = !gh auth git-credential
-[credential "https://gist.github.com"]
-	helper =
-	helper = !gh auth git-credential
 [core]
 	editor = nvim
+    pager = delta
 [color]
 	ui = true
 [merge]
 	tool = nvimdiff
-; [mergetool]
-; 	keepBackup = false
-
-; Delta config
-[core]
-    pager = delta
+    conflictstyle = zdiff3
 [interactive]
     diffFilter = delta --color-only
 [delta]
     navigate = true    # use n and N to move between diff sections
-    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
     side-by-side = true
-[merge]
-    conflictstyle = diff3
-[diff]
-    colorMoved = default
+
+[credential "https://github.com"]
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !gh auth git-credential
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
