@@ -1,3 +1,5 @@
+abbr -a ... ../..
+abbr -a .... ../../..
 abbr -a j z
 {{#if (is_executable "eza")}}
 abbr -a l "eza -ah"
