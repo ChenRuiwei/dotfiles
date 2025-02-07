@@ -131,8 +131,8 @@ unset key
 
 # User configuration
 
-export PATH="~/bin/":$PATH
-export PATH="~/.cargo/bin/":$PATH
+export PATH="$HOME/bin/":$PATH
+export PATH="$HOME/.cargo/bin/":$PATH
 
 # Consistent file dialog under KDE Plasma
 # See https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications
