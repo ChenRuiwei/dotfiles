@@ -1,4 +1,4 @@
 TERMINAL=kitty
 EDITOR=nvim
-PAGER=less -R
+PAGER=less
 MANPAGER=$PAGER
