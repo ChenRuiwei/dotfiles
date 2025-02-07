@@ -140,8 +140,8 @@ export GTK_USE_PORTAL=1
 
 alias j='z'
 alias jj='yazi'
-alias l='exa -lh'
-alias ll='exa -lah'
+alias l='eza -lh'
+alias ll='eza -lah'
 alias lg='lazygit'
 alias tmut='TERM=xterm-256color tmux'
 alias v='nvim'
