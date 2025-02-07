@@ -10,7 +10,7 @@ gh = "~/.config/gh"
 gitconfig = "~/.gitconfig"
 scripts = "~/bin"
 "tmux.conf" = "~/.tmux.conf"
-env = "~/.env"
+env = "~/.crwenv"
 lazygit = "~/.config/lazygit"
 inputrc = "~/.inputrc"
 
@@ -27,7 +27,8 @@ bashrc = "~/.bashrc"
 depends = ["shell"]
 
 [zsh.files]
-zshrc = "~/.zshrc"
+"zsh/zshrc" = "~/.zshrc"
+"zsh/zimrc" = "~/.zimrc"
 
 [fish]
 depends = ["shell"]

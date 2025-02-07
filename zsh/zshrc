@@ -1,4 +1,4 @@
-# Start configuration added by Zim install
+# Start configuration added by Zim install (((
 #
 # User configuration sourced by interactive shells
 #
@@ -105,7 +105,7 @@ if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
   fi
 fi
 # Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
-if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZIM_CONFIG_FILE:-${ZDOTDIR:-${HOME}}/.zimrc} ]]; then
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi
 # Initialize modules.
@@ -126,69 +126,27 @@ for key ('^[[B' '^N' ${terminfo[kcud1]}) bindkey ${key} history-substring-search
 for key ('k') bindkey -M vicmd ${key} history-substring-search-up
 for key ('j') bindkey -M vicmd ${key} history-substring-search-down
 unset key
-# End configuration added by Zim install
-
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:/opt/cuda/bin:$HOME/.cargo/bin:$PATH
-export PATH=/home/crw/Code/user-land-filesystem/driver/user_ddriver/bin:$PATH
+# ))) End configuration added by Zim install
 
 
 # User configuration
+
+export PATH = "~/bin/":$PATH
+export PATH = "~/.cargo/bin/":$PATH
 
 # Consistent file dialog under KDE Plasma
 # See https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications
 export GTK_USE_PORTAL=1
 
-# Example aliases
-alias zshconfig="nvim ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias del='rmtrash'
-alias c='clear'
-alias h='history'
-alias cat='bat'
-alias l='exa -lah'
-alias ll='exa -lh'
 alias j='z'
-alias g='git'
-alias gs='git status'
-alias t='TERM=xterm-256color tmux'
-alias tmux='TERM=xterm-256color tmux'
+alias jj='yazi'
+alias l='exa -lh'
+alias ll='exa -lah'
+alias lg='lazygit'
+alias tmut='TERM=xterm-256color tmux'
 alias v='nvim'
-# alias rm="echo Use 'rmtrash' or the alias 'del', or the full path i.e. '/bin/rm'"
 
-mcd() {
-    mkdir -p "$@"
-    cd "$@"
-}
+export $(envsubst < ~/.crwenv)
 
-
-# Set personal environment variables
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export VISUAL=nvim
-export EDITOR=nvim
-export PAGER=less
-export REPO_DIR=$HOME/Code/cs61b
-
-# starship
 eval "$(starship init zsh)"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/crw/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/crw/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/crw/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/crw/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
-if [ -f "/home/crw/miniforge3/etc/profile.d/mamba.sh" ]; then
-    . "/home/crw/miniforge3/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
-
+eval "$(zoxide init zsh)"
