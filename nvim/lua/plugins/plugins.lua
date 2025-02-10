@@ -155,4 +155,12 @@ return {
       },
     },
   },
+
+  -- For auto switch Chinese input method in macOS
+  {
+    "keaising/im-select.nvim",
+    config = function()
+      require("im_select").setup({})
+    end,
+  },
 }
