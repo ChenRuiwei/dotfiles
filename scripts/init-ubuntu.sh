@@ -15,7 +15,7 @@ fi
 echo 'experimental-features = nix-command flakes' | sudo tee /etc/nix/nix.conf
 
 # Install useful tools
-nix-env -i dotter tmux neovim yazi lazygit eza zoxide fzf fd ripgrep tealdeer htop btop delta starship
+nix-env -i dotter tmux neovim yazi lazygit eza zoxide fzf fd ripgrep tealdeer htop btop delta starship gh
 
 # Download Nerd fonts
 font="JetBrainsMono" # or Noto
