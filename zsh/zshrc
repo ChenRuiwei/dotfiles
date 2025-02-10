@@ -139,12 +139,22 @@ export PATH="$HOME/.cargo/bin/":$PATH
 export GTK_USE_PORTAL=1
 
 alias j='z'
-alias jj='yazi'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias l='eza -lh'
 alias ll='eza -lah'
 alias lg='lazygit'
 alias tmut='TERM=xterm-256color tmux'
 alias v='nvim'
+
+function jj() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 export $(envsubst < ~/.crwenv)
 
