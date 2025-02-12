@@ -29,6 +29,7 @@ depends = ["shell"]
 [zsh.files]
 "zsh/zshrc" = "~/.zshrc"
 "zsh/zimrc" = "~/.zimrc"
+"zsh/zshenv" = "~/.zshenv"
 
 [fish]
 depends = ["shell"]
