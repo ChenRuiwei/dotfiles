@@ -12,6 +12,8 @@ opt.autoindent = true
 opt.smartindent = true
 opt.jumpoptions = "stack"
 
+vim.g.autoformat = false
+
 vim.cmd([[
 if executable("fcitx5-remote")
         let g:fcitx5_rime = 1
