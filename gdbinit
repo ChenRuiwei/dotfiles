@@ -2388,3 +2388,12 @@ python import sys; sys.modules['readline'] = None
 
 set auto-load safe-path /
 set confirm off
+
+define my-source-profile
+  dashboard -layout source expressions stack variables
+  dashboard source -style height 20
+end
+
+define my-assembly-profile
+  dashboard -layout registers assembly memory stack
+end
