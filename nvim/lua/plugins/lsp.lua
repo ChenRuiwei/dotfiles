@@ -1,22 +1,4 @@
 return {
-  -- {
-  --   "williamboman/mason.nvim",
-  --   opts = function(_, opts)
-  --     if type(opts.ensure_installed) == "table" then
-  --       vim.list_extend(opts.ensure_installed, { "verible", "typst-lsp", "rust-analyzer" })
-  --     end
-  --   end,
-  -- },
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --   opts = {
-  --     servers = {
-  --       typst_lsp = {
-  --         root_dir = require("lspconfig.util").root_pattern("*.typ"),
-  --       },
-  --     },
-  --   },
-  -- },
   {
     "stevearc/conform.nvim",
     opts = {
