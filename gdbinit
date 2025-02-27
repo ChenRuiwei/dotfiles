@@ -2388,6 +2388,7 @@ python import sys; sys.modules['readline'] = None
 
 set auto-load safe-path /
 set confirm off
+set history size 10000
 
 define my-source-profile
   dashboard -layout source expressions stack variables
