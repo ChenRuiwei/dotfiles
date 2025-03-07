@@ -6,7 +6,6 @@ abbr -a l "eza -ah"
 abbr -a ll "eza -lah"
 {{/if}}
 abbr -a lg lazygit
-abbr -a jj yazi
 abbr -a v nvim
 abbr -a m man
 abbr -a tmux "TERM=xterm-256color tmux"
@@ -48,6 +47,15 @@ function fish_user_key_bindings
     for mode in insert default visual
         bind -M $mode \cf forward-char
     end
+end
+
+function jj
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
 end
 
 fish_vi_key_bindings
