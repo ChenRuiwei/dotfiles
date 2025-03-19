@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install basic tools
-sudo apt install -y git curl make cmake gcc bzip2 fish zsh wget
+sudo apt install -y git curl make cmake gcc bzip2 fish zsh wget gettext python-is-python3 python3-pip
 
 # Install Nix
 bash <(curl -L https://nixos.org/nix/install) --daemon
