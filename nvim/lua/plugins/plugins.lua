@@ -71,25 +71,6 @@ return {
   },
 
   {
-    -- If nothing happens on MarkdownPreview, see the issue
-    -- https://github.com/iamcco/markdown-preview.nvim/issues/188#issuecomment-629038471
-    "iamcco/markdown-preview.nvim",
-    ft = "markdown",
-    build = function()
-      vim.fn["mkdp#util#install"]()
-    end,
-    config = function()
-      vim.cmd([[
-        function OpenMarkdownPreview (url)
-          execute "silent ! google-chrome-stable --new-window " . a:url
-        endfunction
-        let g:mkdp_browserfunc = 'OpenMarkdownPreview'
-        let g:mkdp_theme = 'light'
-      ]])
-    end,
-  },
-
-  {
     "kaarmu/typst.vim",
     ft = "typst",
   },
