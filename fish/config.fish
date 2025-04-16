@@ -71,6 +71,10 @@ starship init fish | source
 zoxide init fish | source
 {{/if}}
 
+{{#if (is_executable "direnv")}}
+direnv hook fish | source
+{{/if}}
+
 {{#if (is_executable "mamba")}}
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'micromamba shell init' !!
