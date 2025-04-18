@@ -2,8 +2,8 @@ abbr -a ... ../..
 abbr -a .... ../../..
 abbr -a j z
 {{#if (is_executable "eza")}}
-abbr -a l "eza -ah"
-abbr -a ll "eza -lah"
+abbr -a l "eza -ahb"
+abbr -a ll "eza -lahb"
 {{/if}}
 abbr -a lg lazygit
 abbr -a v nvim
