@@ -143,6 +143,7 @@ alias ll='eza -lah'
 alias lg='lazygit'
 alias tmut='TERM=xterm-256color tmux'
 alias v='nvim'
+alias history="history 1"
 
 function jj() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
