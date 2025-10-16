@@ -11,7 +11,7 @@ return {
   -- Change origin plugins
   --------------------------------------------------------------------------------
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     opts = {
       custom_surroundings = {
         ["("] = { output = { left = "(", right = ")" } },
