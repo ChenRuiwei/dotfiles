@@ -5,19 +5,23 @@ in
 
 pkgs.mkShell {
   packages = with pkgs; [
-    git
-    neovim
-    lazygit
-    ripgrep
-    fd
-    fzf
-    zoxide
+    bat
+    btop
     dotter
+    dust
     eza
-    yazi
-    tealdeer
-    starship
+    fd
     fish
+    fzf
+    git
+    lazygit
+    neovim
+    ripgrep
+    starship
+    tealdeer
+    tokei
+    yazi
+    zoxide
   ];
 
   shellHook = ''
