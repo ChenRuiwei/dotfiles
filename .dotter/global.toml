@@ -17,6 +17,9 @@ inputrc = "~/.inputrc"
 [starship.files]
 "starship.toml" = "~/.config/starship.toml"
 
+[nix.files]
+"nix/shell.nix" = "~/shell.nix"
+
 [bash]
 depends = ["shell"]
 

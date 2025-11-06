@@ -7,6 +7,7 @@ pkgs.mkShell {
   packages = with pkgs; [
     bat
     btop
+    delta
     dotter
     dust
     eza
@@ -16,9 +17,12 @@ pkgs.mkShell {
     git
     lazygit
     neovim
+    nvitop
     ripgrep
     starship
     tealdeer
+    tmux
+    tree-sitter
     tokei
     yazi
     zoxide
@@ -26,6 +30,5 @@ pkgs.mkShell {
 
   shellHook = ''
     echo "欢迎进入 Nix 开发环境！"
-    fish
   '';
 }
