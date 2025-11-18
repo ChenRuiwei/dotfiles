@@ -11,6 +11,7 @@ opt.expandtab = true
 opt.autoindent = true
 opt.smartindent = true
 opt.jumpoptions = "stack"
+opt.clipboard = "unnamedplus"
 
 vim.cmd([[
 if executable("fcitx5-remote")
