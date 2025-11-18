@@ -143,4 +143,26 @@ return {
       require("im_select").setup({})
     end,
   },
+
+  {
+    "yetone/avante.nvim",
+    opts = {
+      provider = "ipads", -- You can then change this provider here
+      providers = {
+        ["ipads"] = {
+          __inherited_from = "openai",
+          endpoint = "http://ipads.chat.gpt:3006/v1", -- The full endpoint of the provider
+          model = "gemini-2.5-pro", -- The model name to use with this provider
+          api_key_name = "IPADS_API_KEY", -- The name of the environment variable that contains the API key
+        },
+      },
+      selection = {
+        hint_display = "none",
+      },
+      behaviour = {
+        auto_set_keymaps = false,
+      },
+    },
+  },
+
 }
