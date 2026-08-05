@@ -13,6 +13,7 @@ scripts = "~/bin"
 env = "~/.crwenv"
 lazygit = "~/.config/lazygit"
 inputrc = "~/.inputrc"
+karabiner = "~/.config/karabiner"
 
 [starship.files]
 "starship.toml" = "~/.config/starship.toml"
