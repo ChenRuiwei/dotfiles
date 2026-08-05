@@ -41,6 +41,7 @@ readonly -a BREW_FORMULAE=(
     tealdeer
     tmux
     tokei
+    tree-sitter-cli
     unzip
     uv
     yazi
