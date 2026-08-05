@@ -13,7 +13,6 @@ scripts = "~/bin"
 env = "~/.crwenv"
 lazygit = "~/.config/lazygit"
 inputrc = "~/.inputrc"
-karabiner = "~/.config/karabiner"
 
 [starship.files]
 "starship.toml" = "~/.config/starship.toml"
@@ -86,3 +85,6 @@ nvim = { target = "~/.config/nvim", type = "symbolic" }
 
 [zathura.files]
 zathurarc = "~/.config/zathura/zathurarc"
+
+[other.files]
+karabiner = "~/.config/karabiner"
