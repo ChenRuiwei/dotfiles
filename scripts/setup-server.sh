@@ -48,6 +48,19 @@ readonly -a BREW_FORMULAE=(
     zoxide
 )
 
+readonly -a BREW_CASKS=(
+    claude-code
+    codex
+)
+
+readonly -a BREW_TAPS=(
+    anomalyco/tap
+)
+
+readonly -a BREW_TAP_FORMULAE=(
+    anomalyco/tap/opencode
+)
+
 log() {
     printf '[%s] %s\n' "$SCRIPT_NAME" "$*"
 }
@@ -136,6 +149,16 @@ ensure_homebrew() {
 install_formulae() {
     log "Installing Homebrew formulae"
     "$BREW" install "${BREW_FORMULAE[@]}"
+}
+
+install_casks() {
+    log "Installing Homebrew casks"
+    "$BREW" install --cask "${BREW_CASKS[@]}"
+}
+
+install_tap_formulae() {
+    log "Installing Homebrew tap formulae"
+    "$BREW" install "${BREW_TAP_FORMULAE[@]}"
 }
 
 ensure_dotfiles_checkout() {
@@ -233,6 +256,8 @@ main() {
     log "Starting server setup"
     ensure_homebrew
     install_formulae
+    install_casks
+    install_tap_formulae
     ensure_dotfiles_checkout
     install_nerd_font
     deploy_dotfiles
