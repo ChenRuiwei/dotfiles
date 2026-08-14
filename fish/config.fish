@@ -39,8 +39,6 @@ set fish_greeting
 fish_add_path ~/bin/
 fish_add_path ~/.cargo/bin/
 
-export (envsubst < ~/.crwenv)
-
 function fish_user_key_bindings
     # for accepting autosuggestions in vi mode
     # https://github.com/fish-shell/fish-shell/issues/3541#issuecomment-260001906
